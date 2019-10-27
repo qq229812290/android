@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.FaceCollectionActivity">
+
+    <Button
+        android:onClick="select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择图片" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/photo"/>
+   <RelativeLayout
+       android:id="@+id/after"
+       android:visibility="invisible"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       >
+       <TextView
+           android:id="@+id/textname"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="姓名:"
+           android:layout_marginLeft="30sp"
+           android:textSize="30dp"></TextView>
+       <EditText
+           android:layout_width="100dp"
+           android:layout_toRightOf="@+id/textname"
+           android:layout_height="wrap_content"
+           android:id="@+id/username"
+           android:inputType="textCapCharacters"/>
+       <Button
+           android:layout_below="@+id/textname"
+           android:onClick="upload"
+           android:id="@+id/upload"
+           android:layout_marginLeft="30sp"
+           android:enabled="false"
+           android:background="#EA5500"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="上传" />
+   </RelativeLayout>
+</LinearLayout>
