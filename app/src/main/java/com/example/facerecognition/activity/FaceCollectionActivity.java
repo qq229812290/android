@@ -180,6 +180,7 @@ public class FaceCollectionActivity extends AppCompatActivity {
                     Looper.loop();
                 } catch (Exception e) {
                     e.printStackTrace();
+
                 }
             }
         }.start();
