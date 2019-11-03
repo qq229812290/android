@@ -12,10 +12,3 @@
 /captures
 .externalNativeBuild
 .cxx
-/settings.gradle
-/gradlew
-/gradlew.bat
-/gradle.properties
-/app/src/androidTest/*
-/app/src/test/*
-/app/proguard-rules.pro
