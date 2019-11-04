@@ -18,6 +18,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         new Thread(networkTask).start();
         super.onCreate();
+
     }
 
 
