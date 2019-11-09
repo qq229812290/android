@@ -21,6 +21,7 @@ import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -32,12 +33,15 @@ import android.widget.Toast;
 import com.baidu.aip.util.Base64Util;
 import com.example.facerecognition.MyApplication;
 import com.example.facerecognition.R;
+import com.example.facerecognition.bean.User;
 import com.example.facerecognition.utils.GsonUtils;
 import com.example.facerecognition.utils.HttpUtil;
+import com.example.facerecognition.utils.JDBCUtils;
 
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,7 +53,7 @@ public class FaceCollectionActivity extends AppCompatActivity {
     private byte[] fileBuf;
     private Button upload;
     private RelativeLayout after;
-    private EditText username;
+    private String username;
     private Spinner spinner;
     private List<String> data;
     private ArrayAdapter adapter;
@@ -61,33 +65,7 @@ public class FaceCollectionActivity extends AppCompatActivity {
         photo = findViewById(R.id.photo);
         upload = findViewById(R.id.upload);
         after = findViewById(R.id.after);
-        username = findViewById(R.id.username);
-        username.addTextChangedListener(userNameChange);
-
     }
-
-    TextWatcher userNameChange = new TextWatcher() {
-        @Override
-        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-        }
-
-        @Override
-        public void onTextChanged(CharSequence s, int start, int before, int count) {
-            if (s.toString().length()==0){
-                upload.setEnabled(false);
-                upload.setBackgroundColor(Color.GRAY);
-            }else {
-                upload.setEnabled(true);
-                upload.setBackgroundColor(Color.BLUE);
-            }
-        }
-
-        @Override
-        public void afterTextChanged(Editable s) {
-
-        }
-    };
 
     //相册选择
     public void select(View view){
@@ -147,7 +125,44 @@ public class FaceCollectionActivity extends AppCompatActivity {
 
     //设置下拉列表
     public void showList(){
-        
+        Thread checkData = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                spinner=findViewById(R.id.spinner);
+                data=new ArrayList<String>();
+                ArrayList<User> userList = JDBCUtils.getAllUsers();
+                for (User user : userList) {
+                    data.add(user.getUsername());
+                }
+            }
+        });
+        checkData.start();
+        while (true){
+            if(!checkData.isAlive()){
+                break;
+            }
+        }
+        //2、未下来列表定义一个数组适配器
+        adapter=new ArrayAdapter(FaceCollectionActivity.this,android.R.layout.simple_list_item_1,data);
+        //3、为适配器设置下拉菜单的样式
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //4、将适配器配置到下拉列表上
+        spinner.setAdapter(adapter);
+        //5、给下拉菜单设置监听事件
+        spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                username = data.get(position);
+                upload.setEnabled(true);
+                upload.setBackgroundColor(Color.BLUE);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         after.setVisibility(View.VISIBLE);
     }
 
@@ -165,8 +180,7 @@ public class FaceCollectionActivity extends AppCompatActivity {
 
     //人脸库上传的处理
     public void upload(View view) {
-        String name = username.getText().toString();
-        final String userId = name;
+        final String userId = username;
         final String image = Base64Util.encode(fileBuf);
         final String groupId = "groupDemo";
         new Thread() {

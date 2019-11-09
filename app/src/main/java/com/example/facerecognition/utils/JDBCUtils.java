@@ -72,15 +72,13 @@ public class JDBCUtils {
         Connection conn = getConnection();
         PreparedStatement pstmt  = null;
         ResultSet rs = null;
-        User user = null;
         ArrayList<User> userList = new ArrayList<>();
         try {
             String sql = "select * from user";
             pstmt = conn.prepareStatement(sql);
             rs = pstmt.executeQuery();
             while(rs.next()){
-                user.setUsername(rs.getString(2));
-                user.setPassword(rs.getString(3));
+                User user = new User(rs.getString(2),rs.getString(3));
                 userList.add(user);
             }
         }catch (SQLException e){

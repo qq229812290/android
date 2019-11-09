@@ -29,12 +29,12 @@
            android:text="姓名:"
            android:layout_marginLeft="30sp"
            android:textSize="30dp"></TextView>
-       <EditText
-           android:layout_width="100dp"
-           android:layout_toRightOf="@+id/textname"
-           android:layout_height="wrap_content"
-           android:id="@+id/username"
-           android:inputType="textCapCharacters"/>
+       <Spinner
+           android:layout_toRightOf="@id/textname"
+           android:id="@+id/spinner"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+       </Spinner>
        <Button
            android:layout_below="@+id/textname"
            android:onClick="upload"
