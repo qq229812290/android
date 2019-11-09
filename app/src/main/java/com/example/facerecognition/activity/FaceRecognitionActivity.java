@@ -170,17 +170,6 @@ public class FaceRecognitionActivity extends AppCompatActivity {
                 }).create().show();
     }
 
-    public void outtest(View view) {
-        new AlertDialog.Builder(FaceRecognitionActivity.this)
-                .setTitle("检测结果")
-                .setMessage("姓名为：")
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(FaceRecognitionActivity.this, MainActivity.class);
-                        startActivity(intent);
-                    }
-                }).create().show();
-    }
+
 
 }

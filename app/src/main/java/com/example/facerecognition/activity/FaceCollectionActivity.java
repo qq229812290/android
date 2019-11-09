@@ -18,28 +18,28 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Looper;
-import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.baidu.aip.util.Base64Util;
-import com.baidu.aip.util.Util;
 import com.example.facerecognition.MyApplication;
 import com.example.facerecognition.R;
 import com.example.facerecognition.utils.GsonUtils;
 import com.example.facerecognition.utils.HttpUtil;
-import com.example.facerecognition.utils.Utils;
+
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FaceCollectionActivity extends AppCompatActivity {
@@ -50,6 +50,9 @@ public class FaceCollectionActivity extends AppCompatActivity {
     private Button upload;
     private RelativeLayout after;
     private EditText username;
+    private Spinner spinner;
+    private List<String> data;
+    private ArrayAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -136,10 +139,16 @@ public class FaceCollectionActivity extends AppCompatActivity {
             fileBuf=convertToBytes(inputStream);
             Bitmap bitmap = BitmapFactory.decodeByteArray(fileBuf, 0, fileBuf.length);
             photo.setImageBitmap(bitmap);
-            after.setVisibility(View.VISIBLE);
+            showList();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    //设置下拉列表
+    public void showList(){
+        
+        after.setVisibility(View.VISIBLE);
     }
 
     private byte[] convertToBytes(InputStream inputStream) throws Exception{

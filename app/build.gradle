@@ -32,4 +32,5 @@ dependencies {
     implementation files('libs/slf4j-simple-1.7.25.jar')
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation files('libs/fastjson-1.2.62.jar')
+    implementation files('libs/mysql-connector-java-5.1.38.jar')
 }
