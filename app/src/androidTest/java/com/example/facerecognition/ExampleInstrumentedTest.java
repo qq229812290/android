@@ -32,15 +32,9 @@ public class ExampleInstrumentedTest {
 
     @Test
     public void jsonFast(){
-        String json = "{\"error_code\":0,\"error_msg\":\"SUCCESS\",\"log_id\":6584153505058,\"timestamp\":1572166649,\"cached\":0,\"result\":{\"face_token\":\"dbd6161fd7a2b26748a8d6a498b6d408\",\"user_list\":[{\"group_id\":\"groupDemo\",\"user_id\":\"SCARLETT\",\"user_info\":\"\",\"score\":100}]}}";
-        JSONObject jsonObject = JSON.parseObject(json);
-        String resultStr = jsonObject.getString("result");
-        JSONObject resultObject = JSON.parseObject(resultStr);
-        Object object =  resultObject.getJSONArray("user_list").get(0);
-        String str = JSON.toJSONString(object);
-        JSONObject jsonStr = JSON.parseObject(str);
-        String userID = jsonStr.getString("user_id");
-        System.out.println(userID);
+       String test1 = "123456";
+       test1 = test1.substring(1,test1.length()-1);
+        System.out.println(test1);
     }
 
 
