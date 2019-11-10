@@ -5,23 +5,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#000000"
     tools:context=".activity.MainActivity">
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="输入人脸"
-    android:layout_gravity="center"
-    android:textSize="30dp"
-    android:onClick="turnToFaceCollection"/>
-
-
-    <Button
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="检测人脸"
-        android:layout_gravity="center"
-        android:textSize="30dp"
-        android:onClick="turnToFaceRecognition"/>
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/rl_logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/button_margin_left"
+            android:layout_marginRight="@dimen/button_margin_left"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bt_login"
+                android:onClick="turnToFaceCollection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_button"
+                android:text="人脸库上传"
+                android:textColor="@drawable/selector_text" />
+
+            <Button
+                android:id="@+id/bt_register"
+                android:onClick="turnToFaceRecognition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:background="@drawable/selector_button"
+                android:text="合照检测"
+                android:textColor="@drawable/selector_text" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
 </LinearLayout>

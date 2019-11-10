@@ -155,7 +155,6 @@ public class FaceCollectionActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 username = data.get(position);
                 upload.setEnabled(true);
-                upload.setBackgroundColor(Color.BLUE);
             }
 
             @Override

@@ -1,11 +1,139 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- Activity默认样式 -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:screenOrientation">portrait</item>
+    </style>
+
+    <!--去掉Activity的ActionBar的样式-->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--播放界面-->
+    <style name="AppTheme.NoActionBar.Black">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+    </style>
+
+    <!--toolbar样式-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--版权样式-->
+    <style name="CopyrightText">
+        <item name="android:textColor">@color/text_white</item>
+        <item name="android:textSize">@dimen/copyright</item>
+    </style>
+
+    <!--登陆，注册界面EditText样式-->
+    <style name="EditText">
+        <item name="android:drawablePadding">@dimen/button_padding</item>
+
+        <item name="android:paddingTop">@dimen/button_padding</item>
+        <item name="android:paddingBottom">@dimen/button_padding</item>
+        <item name="android:background">@drawable/selector_edittext</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_marginTop">@dimen/button_margin_top</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!--侧滑，设置界面Item-->
+    <style name="ItemContainer">
+        <item name="android:clickable">true</item>
+        <item name="android:paddingLeft">@dimen/activity_margin</item>
+        <item name="android:paddingRight">@dimen/activity_margin</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_height</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="ItemIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ItemText">
+        <item name="android:layout_marginLeft">@dimen/item_icon_padding</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ItemTextHint">
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="ItemContainerLarge">
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--暂时一样，所以直接继承-->
+    <style name="ItemIconLarge" parent="ItemIcon">
+    </style>
+
+    <style name="ItemTextLarge">
+        <item name="android:layout_marginLeft">@dimen/item_icon_padding</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:textSize">@dimen/text_large</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!--tabLayout样式-->
+    <style name="TabLayout">
+        <!--<item name="tabSelectedTextColor">@color/white</item>-->
+        <!--<item name="tabTextColor">@color/text_white</item>-->
+        <!--<item name="tabMode">fixed</item>-->
+        <!--<item name="tabIndicatorColor">@color/white</item>-->
+    </style>
+
+    <!--音乐播放SeekBar-->
+    <style name="MusicSeekBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:maxHeight">@dimen/music_seek_bar_height</item>
+        <item name="android:minHeight">@dimen/music_seek_bar_height</item>
+        <!--<item name="android:progressDrawable">@drawable/shape_music_seek_bar</item>-->
+    </style>
+
+    <style name="ItemEntryContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_music_entry_height</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/button_padding</item>
+        <item name="android:paddingRight">@dimen/button_padding</item>
+    </style>
+
+    <style name="ItemEntryTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text</item>
+        <item name="android:layout_marginLeft">@dimen/item_icon_padding</item>
+    </style>
+
+    <style name="ItemEntryCount">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 </resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="guide_indicator_height">40dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="small_divider">1dp</dimen>
+    <dimen name="large_divider">10dp</dimen>
+
+    <dimen name="copyright">12sp</dimen>
+
+    <dimen name="button_width">133dp</dimen>
+    <dimen name="button_height">40dp</dimen>
+    <dimen name="topic_button_height">46dp</dimen>
+    <dimen name="topic_header_height">225dp</dimen>
+    <dimen name="button_radius">20dp</dimen>
+    <dimen name="radius">5dp</dimen>
+    <dimen name="album_small_width">50dp</dimen>
+    <dimen name="elevation">10dp</dimen>
+    <dimen name="button_margin_left">20dp</dimen>
+    <dimen name="button_margin_top">15dp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="share_lyric_logo_width">12dp</dimen>
+
+    <dimen name="avatar_width">80dp</dimen>
+    <dimen name="slide_bottom_height">45dp</dimen>
+    <dimen name="item_height">40dp</dimen>
+    <dimen name="item_select_lyric_height">85dp</dimen>
+    <dimen name="item_icon_padding">5dp</dimen>
+    <dimen name="share_lyric_select_image_width">100dp</dimen>
+    <dimen name="item_music_title_height">30dp</dimen>
+    <dimen name="item_music_entry_height">50dp</dimen>
+    <dimen name="item_music_list_height">60dp</dimen>
+    <dimen name="share_lyric_style_container_height">180dp</dimen>
+    <dimen name="share_lyric_style_item_width">55dp</dimen>
+    <dimen name="share_lyric_qrcode_width">30dp</dimen>
+    <dimen name="play_controller_margin">10dp</dimen>
+    <dimen name="notification_height">64dp</dimen>
+    <dimen name="notification_message_height">50dp</dimen>
+    <dimen name="notification_height_large">100dp</dimen>
+    <dimen name="small_button_height">35dp</dimen>
+    <dimen name="music_controller_margin">25dp</dimen>
+    <dimen name="item_song_margin">25dp</dimen>
+    <dimen name="item_title_height">50dp</dimen>
+    <dimen name="item_play_list_height">45dp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="lyric_small_height">14dp</dimen>
+    <dimen name="text_large">16sp</dimen>
+    <dimen name="song_icon_width">110dp</dimen>
+    <dimen name="song_detail_icon_width">125dp</dimen>
+    <dimen name="item_song_height">55dp</dimen>
+    <dimen name="banner_height">130dp</dimen>
+    <dimen name="item_advertisement">85dp</dimen>
+    <dimen name="header_banner_bg_height">100dp</dimen>
+    <dimen name="tab_layout_height">45dp</dimen>
+    <dimen name="item_singer_width">25dp</dimen>
+    <dimen name="music_text">12sp</dimen>
+    <dimen name="music_seek_bar_height">4dp</dimen>
+    <dimen name="music_seek_bar_height_small">1dp</dimen>
+    <dimen name="item_comment_avatar_width">35dp</dimen>
+    <dimen name="item_friend_avatar_width">55dp</dimen>
+    <dimen name="item_video_height">200dp</dimen>
+    <dimen name="avatar_width_small">30dp</dimen>
+    <dimen name="video_height">200dp</dimen>
+    <dimen name="video_full_screen">30dp</dimen>
+    <dimen name="widget_controller_icon_widget">35dp</dimen>
+    <dimen name="topic_detail_line_height">3dp</dimen>
+    <dimen name="publish_message_edit_text_height">150dp</dimen>
+    <dimen name="message_count_width">30dp</dimen>
+    <dimen name="item_chat_image_width">200dp</dimen>
+
+    <dimen name="line_space_multi">1.3</dimen>
+
+    <dimen name="dp_60">60dp</dimen>
+    <dimen name="dp_22">22dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="topic_text_size">20sp</dimen>
+    <dimen name="topic_count_text_size">18sp</dimen>
+    <dimen name="video_title_text_size">20sp</dimen>
+
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--歌词文字大小-->
+    <dimen name="lyric_lyric_size">16sp</dimen>
+
+</resources>

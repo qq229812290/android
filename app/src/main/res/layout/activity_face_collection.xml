@@ -3,18 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginTop="50dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activity.FaceCollectionActivity">
 
     <Button
         android:onClick="select"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/selector_button"
+        android:layout_marginTop="30dp"
+        android:layout_width="200dp"
+        android:layout_marginLeft="100dp"
         android:text="选择图片" />
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
         android:id="@+id/photo"/>
    <RelativeLayout
        android:id="@+id/after"
@@ -22,27 +29,26 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        >
-       <TextView
-           android:id="@+id/textname"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="姓名:"
-           android:layout_marginLeft="30sp"
-           android:textSize="30dp"></TextView>
        <Spinner
-           android:layout_toRightOf="@id/textname"
+           android:layout_marginLeft="100sp"
            android:id="@+id/spinner"
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content">
+           android:layout_width="200dp"
+           android:layout_marginTop="30dp"
+           android:background="@drawable/spinner_drop_down_shape"
+           android:layout_height="wrap_content"
+           android:paddingLeft="50dp"
+           >
        </Spinner>
        <Button
-           android:layout_below="@+id/textname"
+           android:layout_below="@+id/spinner"
            android:onClick="upload"
            android:id="@+id/upload"
-           android:layout_marginLeft="30sp"
+           android:layout_marginTop="50dp"
+           android:layout_width="200dp"
+           android:layout_marginLeft="100dp"
            android:enabled="false"
-           android:background="#EA5500"
-           android:layout_width="match_parent"
+           android:background="@drawable/selector_button"
+
            android:layout_height="wrap_content"
            android:text="上传" />
    </RelativeLayout>

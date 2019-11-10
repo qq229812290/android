@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <!--其他人聊天消息背景：#e6e8e9-->
+    <!--灰色图标：#808080-->
+    <color name="main_color1">#D44549</color>
+    <color name="main_color">#0C57C8</color>
+    <!--<color name="bg">#f2f4f5</color>-->
+    <color name="bg">@color/white</color>
+    <color name="topic_detail_bg">#AEACAD</color>
+    <color name="topic_detail_line">#BDBDBD</color>
+    <color name="white">@android:color/white</color>
+    <color name="black">@android:color/black</color>
+    <color name="divider_color">#e7e9e9</color>
+
+    <color name="colorPrimary">@color/main_color</color>
+    <color name="colorPrimaryDark">@color/main_color</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="grey">#aaa</color>
+    <color name="text_grey">#aaa</color>
+    <color name="text_dark">#999</color>
+    <color name="text">#333</color>
+    <color name="text_white">#ddd</color>
+    <color name="music_text">#ddd</color>
+    <color name="music_seek_bar_bg">#ddd</color>
+    <color name="cd_bg">#f00</color>
+    <color name="thumb_bg_line">#ddd</color>
+    <color name="text_Highlight">#0c73c2</color>
+
+    <color name="translucent_white_8p">#14FFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!--全局歌词颜色-->
+    <color name="lyric_color0">#F93F45</color>
+    <color name="lyric_color1">#4EC6ED</color>
+    <color name="lyric_color2">#55E19B</color>
+    <color name="lyric_color3">#F2B34E</color>
+    <color name="lyric_color4">#A65EEA</color>
+    <!--end 全局歌词颜色-->
+
+    <!--列表歌词View歌词颜色-->
+    <color name="lyric_text_color">#eee</color>
+
+    <!--歌词拖拽状态，线颜色-->
+    <color name="lyric_drag_line_color">#eee</color>
+
+
 </resources>
