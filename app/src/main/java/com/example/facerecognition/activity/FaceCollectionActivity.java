@@ -110,7 +110,6 @@ public class FaceCollectionActivity extends AppCompatActivity {
     }
     //选择后照片的读取工作
     private void handleSelect(Intent intent){
-        Cursor cursor = null;
         Uri uri = intent.getData();
         try {
             InputStream inputStream = getContentResolver().openInputStream(uri);

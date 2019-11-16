@@ -52,6 +52,16 @@
                 android:background="@drawable/selector_button"
                 android:text="合照检测"
                 android:textColor="@drawable/selector_text" />
+            
+            <Button
+                android:id="@+id/bt_contrast"
+                android:onClick="turnToFaceContrast"
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_button"
+                android:text="人脸对比"
+                android:textColor="@drawable/selector_text" />
 
 
         </LinearLayout>
